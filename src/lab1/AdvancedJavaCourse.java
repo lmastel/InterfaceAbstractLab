@@ -23,10 +23,10 @@ public class AdvancedJavaCourse extends CourseCatalog {
         return this.getCourseName().toUpperCase();
     }
 
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
+//moved to superclass
+//    public String getPrerequisites() {
+//        return prerequisites;
+//    }
 
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {

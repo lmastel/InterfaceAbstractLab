@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 public abstract class CourseCatalog {
     private String courseName;
-    private double credits;
+    //implemented in subclasses private double credits;
     
     private String courseNumber;
     private String prerequisites;
@@ -117,4 +117,31 @@ public abstract class CourseCatalog {
 //        return credits;
 //    }
     //AdvancedJavaCourse- missing getCredits()
+    
+    //IntroToProgrammingCourse- no setter for prereq
+    //IntroJavaCourse-
+//    public void setPrerequisites(String prerequisites) {
+//        this.prerequisites = prerequisites;
+//    }
+    //AdvancedJavaCourse-will implement this method from Advance
+    //best preactice
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }
+    
+    //IntroToProgrammingCourse-no getter prereq
+    //IntroJavaCourse-
+    //will implement getter prereq in superclass
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+    //AdvancedJavaCourse-
+//    public String getPrerequisites() {
+//        return prerequisites;
+//    }
 }

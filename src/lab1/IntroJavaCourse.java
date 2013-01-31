@@ -32,10 +32,10 @@ public class IntroJavaCourse extends CourseCatalog{
 //        return credits;
 //    }
 
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
+//moved to superclass
+//    public String getPrerequisites() {
+//        return prerequisites;
+//    }
 
     public void setPrerequisites(String prerequisites) {
         this.prerequisites = prerequisites;

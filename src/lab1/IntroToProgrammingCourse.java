@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
  */
 public class IntroToProgrammingCourse extends CourseCatalog {
     //moved to superclass private String courseName;
-    //moved to superclassprivate String courseNumber;
-    private double credits;
+    //moved to superclass private String courseNumber;
+    //moved to superclass private double credits;
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
