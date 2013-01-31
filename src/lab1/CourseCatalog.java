@@ -109,9 +109,9 @@ public abstract class CourseCatalog {
     
     //IntroToProgrammingCourse-will move from subclasses to superclass and
     //make final
-    public final double getCredits() {
-        return credits;
-    }
+//    public final double getCredits() {
+//        return credits;
+//    }
     //IntroJavaCourse-
 //    public double getCredits() {
 //        return credits;

@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 public class IntroToProgrammingCourse extends CourseCatalog {
     //moved to superclass private String courseName;
     //moved to superclass private String courseNumber;
-    //moved to superclass private double credits;
+    private double credits;
 
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
@@ -47,6 +47,11 @@ public class IntroToProgrammingCourse extends CourseCatalog {
             System.exit(0);
         }
         this.credits = credits;
+        
+    }
+    
+    public double getCredits() {
+        return credits;
     }
 
     //moved to superclass
