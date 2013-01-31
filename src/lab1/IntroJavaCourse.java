@@ -8,13 +8,17 @@ package lab1;
  */
 public class IntroJavaCourse extends CourseCatalog{
     String courseName;
-    private String courseNumber;
+    //moved to superclass private String courseNumber;
     private double credits;
     private String prerequisites;
 
+    //
     public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+        //calling the superclass methods so that the data is validated
+//        this.courseName = courseName;
+//        this.courseNumber = courseNumber;
+        super.setCourseName(courseName);
+        super.setCourseNumber(courseNumber);
     }
 
     //moved to superclass
