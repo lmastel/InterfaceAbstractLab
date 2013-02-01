@@ -2,6 +2,11 @@ package lab1;
 
 import javax.swing.JOptionPane;
 
+
+    
+    
+    
+    
 /**
  * Describe responsibilities here.
  *
@@ -9,10 +14,10 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends CourseCatalog {
-    String courseName;
-    private String courseNumber;
+    //moved to superclass String courseName;
+    //moved to superclass private String courseNumber;
     private double credits;
-    private String prerequisites;
+    //private String prerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
@@ -28,14 +33,15 @@ public class AdvancedJavaCourse extends CourseCatalog {
 //        return prerequisites;
 //    }
 
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
+    //to superclass
+//    public void setPrerequisites(String prerequisites) {
+//        if(prerequisites == null || prerequisites.length() == 0) {
+//            JOptionPane.showMessageDialog(null,
+//                    "Error: prerequisites cannot be null of empty string");
+//            System.exit(0);
+//        }
+//        this.prerequisites = prerequisites;
+//    }
 
     //implements abstract method from CourseCatalog
     public void setCredits(double credits) {
@@ -44,9 +50,15 @@ public class AdvancedJavaCourse extends CourseCatalog {
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        //method calling itself
+        //this.setCredits(credits);
+        
+        this.credits = credits;
     }
     
+    public double getCredits(){
+        return credits;
+    }
     //moved to superclass
 //    public String getCourseName() {
 //        return courseName;
@@ -66,5 +78,14 @@ public class AdvancedJavaCourse extends CourseCatalog {
 //    public void setCourseNumber(String courseNumber) {
 //        this.courseNumber = courseNumber;
 //    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "AdvancedJavaCourse{" + "credits=" + credits + '}';
+    }
+
+   
+                
     
 }

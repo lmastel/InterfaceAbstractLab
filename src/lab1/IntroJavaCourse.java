@@ -7,10 +7,10 @@ package lab1;
  * @version     1.00
  */
 public class IntroJavaCourse extends CourseCatalog{
-    String courseName;
+    //String courseName;
     //moved to superclass private String courseNumber;
     private double credits;
-    private String prerequisites;
+    //private String prerequisites;
 
     //
     public IntroJavaCourse(String courseName, String courseNumber) {
@@ -41,9 +41,9 @@ public class IntroJavaCourse extends CourseCatalog{
 //        return prerequisites;
 //    }
 
-    public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
-    }
+//    public void setPrerequisites(String prerequisites) {
+//        this.prerequisites = prerequisites;
+//    }
 
     //implements abstract method from CoursCatalog    
     public void setCredits(double credits) {
@@ -55,7 +55,15 @@ public class IntroJavaCourse extends CourseCatalog{
                     "Error: credits must be in the range 0.5 to 4.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        //this.setCredits(credits);
+          this.credits = credits;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + 
+                "IntroJavaCourse{" + "credits=" + credits + '}';
+    }
+
+    
 }

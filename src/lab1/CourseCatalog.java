@@ -144,4 +144,11 @@ public abstract class CourseCatalog {
 //    public String getPrerequisites() {
 //        return prerequisites;
 //    }
+
+    @Override
+    public String toString() {
+        return "CourseCatalog{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", prerequisites=" + prerequisites + '}';
+    }
+    
+    
 }

@@ -69,5 +69,11 @@ public class IntroToProgrammingCourse extends CourseCatalog {
 //        this.courseName = courseName;
 //    }
 
+    @Override
+    public String toString() {
+        return super.toString() + 
+                "IntroToProgrammingCourse{" + "credits=" + credits + '}';
+    }
+
     
 }
