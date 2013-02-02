@@ -41,6 +41,8 @@ public class InterfaceAbstractLab1Demo {
         //the CourseCatalog data type then course didn't have access to the getCredits method
         //in the AdvancedJavaCourse class. When the variable course was defined with the 
         //AdvancedJavaCourse data type then it did have access to the getCredits method.
+        //Although I don't know what I'm talking about I would have to say the two objects do not have
+        //exactly the same methods(behaviours).
         CourseCatalog course = new AdvancedJavaCourse("Advanced Java", "Computer Science 301");  
         //AdvancedJavaCourse course = new AdvancedJavaCourse("Advanced Java", "Computer Science 301"); 
         course.setCredits(4.0);                
