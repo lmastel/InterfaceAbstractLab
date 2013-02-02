@@ -16,6 +16,7 @@ public class InterfaceAbstractLab1Demo {
         System.out.println("Capitalized Course Name is " + itpc.getCapitalizedCourseName());
         System.out.println(itpc);
         System.out.println("");
+                
         
         //Create an instance of a IntroJavaCourse object.
         //Pass the courseName and courseNumber to the IntroJavaCourse constructor.
@@ -26,18 +27,31 @@ public class InterfaceAbstractLab1Demo {
         ijc.setPrerequisites("Introduction to Programming");
         System.out.println("Capitalized Course Name is " + ijc.getCapitalizedCourseName());
         System.out.println(ijc);
-        System.out.println("");        
+        System.out.println("");  
+        
         
         
         //Create an instance of a AdvancedJavaCourse object and use the
-        //Liskov Substitution Principle.
+        //Liskov Substitution Principle. 
         //Pass the courseName and courseNumber to the AdvancedJavaCourse constructor.
         //When the AdvancedJavaCourse constructor executes it calls the superclass
         //setCourseName and setCourseNumber methods that validate the name and number.
-        CourseCatalog course = new AdvancedJavaCourse("Advanced Java", "Computer Science 301");              
+        
+        //When I defined the variable course with
+        //the CourseCatalog data type then course didn't have access to the getCredits method
+        //in the AdvancedJavaCourse class. When the variable course was defined with the 
+        //AdvancedJavaCourse data type then it did have access to the getCredits method.
+        CourseCatalog course = new AdvancedJavaCourse("Advanced Java", "Computer Science 301");  
+        //AdvancedJavaCourse course = new AdvancedJavaCourse("Advanced Java", "Computer Science 301"); 
         course.setCredits(4.0);                
         course.setPrerequisites("Introduction to Java");   
         System.out.println("Capitalized Course Name is " + course.getCapitalizedCourseName());
         System.out.println(course);
+        
+        
+        
+        
+       
+        
     }
 }
