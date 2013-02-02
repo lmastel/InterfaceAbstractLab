@@ -20,8 +20,8 @@ public class AdvancedJavaCourse extends CourseCatalog {
     //private String prerequisites;
 
     public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+        super.setCourseName(courseName);
+        super.setCourseNumber(courseNumber);
     }
 
     public String getCapitalizedCourseName() {
@@ -56,6 +56,7 @@ public class AdvancedJavaCourse extends CourseCatalog {
         this.credits = credits;
     }
     
+    //This class was missing getCredits
     public double getCredits(){
         return credits;
     }

@@ -6,43 +6,45 @@ import javax.swing.JOptionPane;
 
 public abstract class CourseCatalog {
     private String courseName;
-    //implemented in subclasses private double credits;
-    
     private String courseNumber;
-    private String prerequisites;
+    private String prerequisites;    
+    //implemented in subclasses- private double credits;    
+    
+    public CourseCatalog(){
+        //print line just to display the execution of the superclass constructor
+        System.out.println("CourseCatalog Constructor");    
+}
 
-    //IntroToProgrammingCourse- set by constructor and by the following code
-    //which validates courseName which is best practice
+    //IntroToProgrammingCourse uses the following code which validates
+    //courseName which is a best practice. I will call this method from 
+    //the constructors of each subclass. IntroJavaCourse set the courseName in the
+    // constructor with no validation and had no setter. AdvancedJavaCourse
+    //set the courseName in the constructor and also had a setter both with no
+    //validation.
     public final void setCourseName(String courseName) {
+        System.out.println("superclass setCourseName");
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
             System.exit(0);
         }
         this.courseName = courseName;
-    }
-    //IntroJavaCourse- set by constructor, no setter
+    }    
     
-    //AdvancedJavaCourse - set by constructor and by the following code
-    //which doesn't validate courseName
-//    public void setCourseName(String courseName) {
-//        this.courseName = courseName;
-//    }
-    
-    //IntroToProgrammingCourse - will use this one for all subclasses and make final
+    //IntroToProgrammingCourse and AdvancedJavaCousre use the following code for
+    //getCourseName. Code is missing in IntroJavaCourse. I will use this code 
+    //for all subclasses and make the method final.
     public final String getCourseName() {
         return courseName;
     }
-    //IntroJavaCourse- missing
-    //AdvancedJavaCourse-
-//    public String getCourseName() {
-//        return courseName;
-//    }
     
-    
-    //IntroToProgramming-set by constructor and by the following code
-    //validates courseNumber which is best practice
+    //IntroToProgrammingCourse uses the following code which validates
+    //courseNumber which is a best practice. I will call this method from 
+    //the constructors of each subclass. IntroJavaCourse and AdvancedJavaCourse
+    //both set the courseNumber in the constructor with no validation and each
+    //had a setter with no validation. 
     public final void setCourseNumber(String courseNumber) {
+        System.out.println("superclass setCourseNumber");
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null of empty string");
@@ -50,81 +52,27 @@ public abstract class CourseCatalog {
         }
         this.courseNumber = courseNumber;
     }
-    //IntroJavaCourse-wset by constructor and by the following code
-    //doesn't validate courseNumber so will not be used
-//    public void setCourseNumber(String courseNumber) {
-//        this.courseNumber = courseNumber;
-//    }
-    //AdvancedJavaCourse-set by constructor and by the following code
-    //doesn't validate courseNumber so will not be used
-//    public void setCourseNumber(String courseNumber) {
-//        this.courseNumber = courseNumber;
-//    }
-    
-    //IntroToProgrammingCourse- will move this getter to superclass and remove
-    //from subclasses and also will make final
+        
+    //IntroToProgrammingCourse, IntroJavaCourse, and AdvancedJavaCourse
+    //all contained the following code. I moved this getter to superclass and removed
+    //from the subclasses and also made it final.
     public final String getCourseNumber() {
         return courseNumber;
     }
-    //IntroJavaCourse-
-//    public String getCourseNumber() {
-//        return courseNumber;
-//    }
-    //AdvancedJavaCourse-
-//    public String getCourseNumber() {
-//        return courseNumber;
-//    }
-    
-    
-    //setCredits method- I will make abstract because implementation differs
-    //in subclasses and logic errors
+        
+    //setCredits- I will make this method abstract in the superclass because
+    //its implementation differs, or might differ, in the subclasses and there 
+    //appears to be errors in the IntroJavaCourse class that needs to be rectified. 
+    //Either the if statement range check logic is correct and the error message 
+    //is incorrect or vice versa.
     public abstract void setCredits(double credits);
-    //IntroToProgrammingCourse- 
-//    public void setCredits(double credits) {
-//        if(credits < 0.5 || credits > 4.0) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Error: credits must be in the range 0.5 to 4.0");
-//            System.exit(0);
-//        }
-//        this.credits = credits;
-//    }
-    //IntroJavaCourse-logic conflicts with error message,
-//    public void setCredits(double credits) {
-//        if(credits < 0 || credits > 5.0) {
-//            System.out.println(
-//                    "Error: credits must be in the range 0.5 to 4.0");
-//            System.exit(0);
-//        }
-//        this.setCredits(credits);
-//    }
-    //AdvancedJavaCourse-
-//    public void setCredits(double credits) {
-//        if(credits < 0.5 || credits > 4.0) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Error: credits must be in the range 0.5 to 4.0");
-//            System.exit(0);
-//        }
-//        this.setCredits(credits);
-//    }
     
-    //IntroToProgrammingCourse-will move from subclasses to superclass and
-    //make final
-//    public final double getCredits() {
-//        return credits;
-//    }
-    //IntroJavaCourse-
-//    public double getCredits() {
-//        return credits;
-//    }
-    //AdvancedJavaCourse- missing getCredits()
     
-    //IntroToProgrammingCourse- no setter for prereq
-    //IntroJavaCourse-
-//    public void setPrerequisites(String prerequisites) {
-//        this.prerequisites = prerequisites;
-//    }
-    //AdvancedJavaCourse-will implement this method from Advance
-    //best preactice
+     
+    //IntroToProgrammingCourse had no setter for Prerequisites.
+    //IntroJavaCourse had a setter but without data valdiation.
+    //AdvancedJavaCourse has a stter with data validation which is a 
+    //best practcice. I will use that code and place it here in the superclass.
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -134,17 +82,13 @@ public abstract class CourseCatalog {
         this.prerequisites = prerequisites;
     }
     
-    //IntroToProgrammingCourse-no getter prereq
-    //IntroJavaCourse-
-    //will implement getter prereq in superclass
+    //IntroToProgrammingCourse had no getter for Prerequisites. 
+    //IntroJavaCourse and AdvancedJavaCourse both had the following code
+    //that I will implement here in the superclass.
     public String getPrerequisites() {
         return prerequisites;
     }
-    //AdvancedJavaCourse-
-//    public String getPrerequisites() {
-//        return prerequisites;
-//    }
-
+    
     @Override
     public String toString() {
         return "CourseCatalog{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", prerequisites=" + prerequisites + '}';
