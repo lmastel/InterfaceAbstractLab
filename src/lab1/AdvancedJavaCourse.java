@@ -14,26 +14,33 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends CourseCatalog {
-    //moved to superclass String courseName;
-    //moved to superclass private String courseNumber;
+    //moved to superclass- String courseName;
+    //moved to superclass- private String courseNumber;
     private double credits;
     //private String prerequisites;
 
+    //When the AdvancedJavaCourse object is created in the Demo main class
+    //the courseName and courseNumber are passed to this constuctor and are
+    //subsequently passed to the corresponding superclass setters so that
+    //the data can be validated.
     public AdvancedJavaCourse(String courseName, String courseNumber) {
         super.setCourseName(courseName);
         super.setCourseNumber(courseNumber);
     }
 
-    public String getCapitalizedCourseName() {
-        return this.getCourseName().toUpperCase();
-    }
+    //This method appears only in this class, AdvancedJavaCourse, but the 
+    //method can be applied to the course names of all subclasses for
+    //consistency. I moved it to the superclass.
+//    public String getCapitalizedCourseName() {
+//        return this.getCourseName().toUpperCase();
+//    }
 
 //moved to superclass
 //    public String getPrerequisites() {
 //        return prerequisites;
 //    }
 
-    //to superclass
+    //moved to superclass
 //    public void setPrerequisites(String prerequisites) {
 //        if(prerequisites == null || prerequisites.length() == 0) {
 //            JOptionPane.showMessageDialog(null,
@@ -43,7 +50,7 @@ public class AdvancedJavaCourse extends CourseCatalog {
 //        this.prerequisites = prerequisites;
 //    }
 
-    //implements abstract method from CourseCatalog
+    //implements abstract method from superclass CourseCatalog
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,

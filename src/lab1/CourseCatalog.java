@@ -12,7 +12,7 @@ public abstract class CourseCatalog {
     
     public CourseCatalog(){
         //print line just to display the execution of the superclass constructor
-        System.out.println("CourseCatalog Constructor");    
+        System.out.println("Superclass CourseCatalog Constructor is executing");    
 }
 
     //IntroToProgrammingCourse uses the following code which validates
@@ -22,7 +22,6 @@ public abstract class CourseCatalog {
     //set the courseName in the constructor and also had a setter both with no
     //validation.
     public final void setCourseName(String courseName) {
-        System.out.println("superclass setCourseName");
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
@@ -44,7 +43,6 @@ public abstract class CourseCatalog {
     //both set the courseNumber in the constructor with no validation and each
     //had a setter with no validation. 
     public final void setCourseNumber(String courseNumber) {
-        System.out.println("superclass setCourseNumber");
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseNumber cannot be null of empty string");
@@ -87,6 +85,10 @@ public abstract class CourseCatalog {
     //that I will implement here in the superclass.
     public String getPrerequisites() {
         return prerequisites;
+    }
+    
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
     }
     
     @Override

@@ -14,6 +14,10 @@ public class IntroToProgrammingCourse extends CourseCatalog {
     //moved to superclass- private String courseNumber;
     private double credits;
 
+    //When the IntroToProgrammingCourse object is created in the Demo main class
+    //the courseName and courseNumber are passed to this constuctor and are
+    //subsequently passed to the corresponding superclass setters so that
+    //the data can be validated.
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         super.setCourseName(courseName);
         super.setCourseNumber(courseNumber);      
@@ -35,11 +39,7 @@ public class IntroToProgrammingCourse extends CourseCatalog {
 //        this.courseNumber = courseNumber;
 //    }
 
-    //moved to superclass
-//    public double getCredits() {
-//        return credits;
-//    }
-
+    
     //implements abstract method from CourseCatalog
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
