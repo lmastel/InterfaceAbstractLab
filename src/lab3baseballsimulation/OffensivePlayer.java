@@ -6,7 +6,7 @@ package lab3baseballsimulation;
 //they are not restricted to either offense or defense. It also implements Baserunner
 //because offensive players are batters but also play the role of baserunners.
 public class OffensivePlayer extends BaseballPlayer implements BaseRunner {
-    private int plateAppearances;
+    private int plateAppearances; //specific to offensive player
     private int walks;
     private int strikeouts;
     private int hitbatters;

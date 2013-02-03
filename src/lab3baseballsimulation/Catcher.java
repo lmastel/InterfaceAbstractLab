@@ -5,9 +5,9 @@ package lab3baseballsimulation;
 //of defensive player and has unique attributes that other defensive position
 //players don't have.
 public class Catcher extends DefensivePlayer {
-    private int passedBalls;
-    private int stolenBaseAttempts;
-    private int caughtStealing;
+    private int passedBalls;         //specific to catcher
+    private int stolenBaseAttempts;  //specific to catcher
+    private int caughtStealing;      //specific to catcher 
 
     public int getPassedBalls() {
         return passedBalls;

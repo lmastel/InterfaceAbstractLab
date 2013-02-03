@@ -7,7 +7,7 @@ package lab3baseballsimulation;
 //a pitcher.
 public class Batter extends OffensivePlayer {
     
-    private char battingHand;
+    private char battingHand; //specific to batter
     
     public void setWalkRate (int plateAppearances, int walks){
         

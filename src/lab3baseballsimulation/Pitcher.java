@@ -8,14 +8,14 @@ package lab3baseballsimulation;
 //in algorithms to determine the outcome of a matchup between a batter and
 //a pitcher.
 public class Pitcher extends DefensivePlayer implements Fielder {
-    private char pitchingHand;
-    private int walks;
-    private int strikeouts;
-    private int hitbatters;
-    private int singles;
-    private int doubles;
-    private int triples;
-    private int homeruns;
+    private char pitchingHand; //specific to a pitcher
+    private int walks;         //allowed by pitcher
+    private int strikeouts;    //allowed by pitcher 
+    private int hitbatters;    //allowed by pitcher 
+    private int singles;       //allowed by pitcher
+    private int doubles;       //allowed by pitcher
+    private int triples;       //allowed by pitcher
+    private int homeruns;      //allowed by pitcher
 
     public void setWalkRate (int plateAppearances, int walks){
         
