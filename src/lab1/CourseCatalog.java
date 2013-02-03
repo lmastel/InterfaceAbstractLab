@@ -65,6 +65,8 @@ public abstract class CourseCatalog {
     //is incorrect or vice versa.
     public abstract void setCredits(double credits);
     
+    public abstract double getCredits();
+    
     
      
     //IntroToProgrammingCourse had no setter for Prerequisites.

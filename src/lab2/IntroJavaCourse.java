@@ -65,6 +65,11 @@ public class IntroJavaCourse implements CourseCatalog {
         }
         this.credits = credits;
     }
+    
+    //original code
+    public double getCredits() {
+        return credits;
+    }
 
     //original code does not validate
     //implementing code that validates prerequisites

@@ -14,6 +14,8 @@ public interface CourseCatalog {
         
     void setCredits(double credits);
     
+    public double getCredits();
+    
     void setPrerequisites(String prerequisites); 
     
     String getPrerequisites(); 
@@ -22,5 +24,7 @@ public interface CourseCatalog {
     
     @Override
     String toString();     
+
+    
     
 }

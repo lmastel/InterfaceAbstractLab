@@ -63,6 +63,13 @@ public class IntroToProgrammingCourse implements CourseCatalog {
         }
         this.credits = credits;
     }
+        
+    //original code
+    public double getCredits() {
+        return credits;
+    }
+        
+    
     //no implementation in original
     //implement code to validate prerequisites
     public void setPrerequisites(String prerequisites) {

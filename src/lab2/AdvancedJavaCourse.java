@@ -59,6 +59,11 @@ public class AdvancedJavaCourse implements CourseCatalog {
         }
         this.credits = credits;
     }
+    
+    //original code
+    public double getCredits() {
+        return credits;
+    }
 
     //original code that validates prerequisites
     public void setPrerequisites(String prerequisites) {
@@ -84,6 +89,8 @@ public class AdvancedJavaCourse implements CourseCatalog {
     public String toString() {
         return "AdvancedJavaCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
     }
+
+    
     
 
     
