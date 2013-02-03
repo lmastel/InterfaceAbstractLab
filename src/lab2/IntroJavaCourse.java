@@ -83,8 +83,9 @@ public class IntroJavaCourse implements CourseCatalog {
     }
 
     //does not exist in original code
+    //carried over from lab1
     public String getCapitalizedCourseName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.getCourseName().toUpperCase();
     }
     
 

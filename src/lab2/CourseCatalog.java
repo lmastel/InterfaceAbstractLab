@@ -20,6 +20,7 @@ public interface CourseCatalog {
     
     String getCapitalizedCourseName(); 
     
+    @Override
     String toString();     
     
 }

@@ -9,37 +9,75 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse implements CourseCatalog {
-
-    public void setCourseName(String courseName) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    private String courseName;
+    private String courseNumber;
+    private double credits;
+    private String prerequisites;
+    
+    //original constructor
+    public AdvancedJavaCourse(String courseName, String courseNumber) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
     }
 
+    //original code
+    public final void setCourseName(String courseName) {
+        if(courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseName = courseName;
+    }
+
+    //original code
     public String getCourseName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return courseName;
     }
 
-    public void setCourseNumber(String courseNumber) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    //original code that validates courseNumber
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
     }
 
+    //original code
     public String getCourseNumber() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return courseNumber;
     }
 
+    //original code that validates credits
     public void setCredits(double credits) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(credits < 0.5 || credits > 4.0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: credits must be in the range 0.5 to 4.0");
+            System.exit(0);
+        }
+        this.credits = credits;
     }
 
+    //original code that validates prerequisites
     public void setPrerequisites(String prerequisites) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
 
+    //original code
     public String getPrerequisites() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return prerequisites;
     }
 
+    //carried over from lab1
     public String getCapitalizedCourseName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.getCourseName().toUpperCase();
     }
     
 

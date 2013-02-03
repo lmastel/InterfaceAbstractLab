@@ -13,6 +13,9 @@ public class IntroToProgrammingCourse implements CourseCatalog {
     private String courseNumber;
     private double credits;
     
+    //attribute didn't exist in original code
+    private String prerequisites;
+    
     //original code
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
@@ -61,18 +64,31 @@ public class IntroToProgrammingCourse implements CourseCatalog {
         this.credits = credits;
     }
     //no implementation in original
+    //implement code to validate prerequisites
     public void setPrerequisites(String prerequisites) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
     }
     
-    //no implementation ion original
+    //no implementation in original
     public String getPrerequisites() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return prerequisites;
     }
 
     //no implementation in original
+    //carried over from lab1
     public String getCapitalizedCourseName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.getCourseName().toUpperCase();
+    }
+
+    @Override
+    public String toString() {
+        return 
+                "IntroToProgrammingCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
     }
     
     
