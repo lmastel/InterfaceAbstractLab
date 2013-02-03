@@ -79,6 +79,11 @@ public class AdvancedJavaCourse implements CourseCatalog {
     public String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
+
+    @Override
+    public String toString() {
+        return "AdvancedJavaCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
+    }
     
 
     

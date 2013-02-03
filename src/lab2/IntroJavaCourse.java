@@ -87,6 +87,11 @@ public class IntroJavaCourse implements CourseCatalog {
     public String getCapitalizedCourseName() {
         return this.getCourseName().toUpperCase();
     }
+
+    @Override
+    public String toString() {
+        return "IntroJavaCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
+    }
     
 
     

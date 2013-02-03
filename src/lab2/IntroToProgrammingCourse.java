@@ -87,8 +87,7 @@ public class IntroToProgrammingCourse implements CourseCatalog {
 
     @Override
     public String toString() {
-        return 
-                "IntroToProgrammingCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
+        return "IntroToProgrammingCourse{" + "courseName=" + courseName + ", courseNumber=" + courseNumber + ", credits=" + credits + ", prerequisites=" + prerequisites + '}';
     }
     
     
